@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Calcular Média</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<script src="js/jquery-2.0.3.min.js"></script>
+			<script src="js/index.js"></script>
+			<script src="js/calc.js"></script>
+    		<script src="js/modernizr.js"></script>
+    		<link rel="stylesheet" href="css/foundation.css" />
+		</head>
+		
+		<body>
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+				    	<h1><a href="#">Calc</h1>
+				    </li>
+				</ul>
+
+				<section class="top-bar-section">
+					<ul class="left">
+						<li><a href="https://github.com/onluiz/calc" target="_blank"><img src="img/git.png"></a></li>
+					</ul>
+					<ul class="left">
+						<li><a href="https://www.facebook.com/luiz1723" target="_blank"><img src="img/facebook.png"></a></li>
+					</ul>
+				</section>
+			</nav>
+
+			<div class="row panel">
+				<p>
+					Nota 1:
+					<input type="number" id="av1">
+				</p>
+
+				<p>
+					Nota 2:
+					<input type="number" id="av2">
+				</p>
+				
+				<p>
+					Nota 3:
+					<input type="number" id="av3">
+				</p>
+				
+				<p>
+					Resultado:
+					<input id="resultado" type="text" disabled>
+				</p>
+				
+				<p>
+					<button id="btnCalcular">Calcular</button>
+					<button id="btnLimpar">Limpar</button>
+					<iframe src="http://www.facebook.com/plugins/like.php?href=http://onsistemas.com/calc.html&layout=standard&show_faces=false&width=380&action=like&colorscheme=light&height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:25px;" allowtransparency="true"></iframe>
+				</p>
+
+				<p>
+					<div id="divMensagem" data-alert class="alert-box">
+						<span id="mensagem">Calcule sua média! :)</span>
+						<a href="#" class="close">&times;</a>
+					</div>
+				</p>
+
+			</div>
+		</body>
+</html>
