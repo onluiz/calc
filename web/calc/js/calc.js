@@ -1,9 +1,9 @@
 $(function() {
 
 	$( "#btnCalcular" ).click(function() {
-		var av1 = $("#av1").val() * $("#peso1").val();
-		var av2 = $("#av2").val() * $("#peso2").val();
-		var av3 = $("#av3").val() * $("#peso3").val();
+		var av1 = tratarFloat($("#av1").val()) * tratarFloat($("#peso1").val());
+		var av2 = tratarFloat($("#av2").val()) * tratarFloat($("#peso2").val());
+		var av3 = tratarFloat($("#av3").val()) * tratarFloat($("#peso3").val());
 		var resultado = (av1 + av2 + av3) / 10;
 		$("#resultado").val(resultado);
 
@@ -21,10 +21,10 @@ $(function() {
 	});
 
 	$( "#av1, #av2" ).blur(function() {
-	 	var av1 = $("#av1").val() * $("#peso1").val();
-		var av2 = $("#av2").val() * $("#peso2").val();
+	 	var av1 = tratarFloat($("#av1").val()) * tratarFloat($("#peso1").val());
+		var av2 = tratarFloat($("#av2").val()) * tratarFloat($("#peso2").val());
 		var soma = av1 + av2;
-		var av3 = soma <= ($("#media").val() * 10) ? (($("#media").val() * 10) - soma) / $("#peso3").val() : 0;
+		var av3 = soma <= (tratarFloat($("#media").val()) * 10) ? ((tratarFloat($("#media").val()) * 10) - soma) / tratarFloat($("#peso3").val()) : 0;
 		$("#av3").val(av3);
 	});
 
@@ -35,3 +35,11 @@ $(function() {
 	});
 
 });
+
+function tratarFloat(valor) {
+	var resultado = parseFloat(valor.replace(',','.').replace(' ',''));
+	if(isNaN(resultado))
+		return 0;
+	else
+		return resultado;
+}
