@@ -1,13 +1,13 @@
 $(function() {
 
 	$( "#btnCalcular" ).click(function() {
-		var av1 = $("#av1").val() * 3;
-		var av2 = $("#av2").val() * 3;
-		var av3 = $("#av3").val() * 4;
+		var av1 = $("#av1").val() * $("#peso1").val();
+		var av2 = $("#av2").val() * $("#peso2").val();
+		var av3 = $("#av3").val() * $("#peso3").val();
 		var resultado = (av1 + av2 + av3) / 10;
 		$("#resultado").val(resultado);
 
-		if(resultado >= 6){
+		if(resultado >= $("#media").val()){
 			$("#divMensagem").removeClass("warning round");
 			$("#divMensagem").addClass("success radius");
 			$("#mensagem").html("Você vai passar! Uhuul :D");
@@ -21,10 +21,10 @@ $(function() {
 	});
 
 	$( "#av1, #av2" ).blur(function() {
-	 	var av1 = $("#av1").val() * 3;
-		var av2 = $("#av2").val() * 3;
+	 	var av1 = $("#av1").val() * $("#peso1").val();
+		var av2 = $("#av2").val() * $("#peso2").val();
 		var soma = av1 + av2;
-		var av3 = soma <= 60 ? (60 - soma) / 4 : 0;
+		var av3 = soma <= ($("#media").val() * 10) ? (($("#media").val() * 10) - soma) / $("#peso3").val() : 0;
 		$("#av3").val(av3);
 	});
 
