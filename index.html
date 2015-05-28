@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>Calcular Média</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<script src="js/vendor/jquery.js"></script>
+    		<script src="js/vendor/modernizr.js"></script>
+    		<script src="js/foundation.min.js"></script>
+    		<!--
+    		<script src="js/foundation/foundation.js"></script>
+    		<script src="js/foundation/foundation.offcanvas.js"></script>
+    		<script src="js/foundation/foundation.dropdown.js"></script>
+			<script src="js/foundation/foundation.tab.js"></script>
+		-->
+    		<script src="js/calc.js"></script>
+    		<link rel="stylesheet" href="css/foundation.css" />
+
+    		<script type="text/javascript">
+    			$(function() {
+    				$(document).foundation();
+    			});
+    		</script>
+		</head>
+		
+		<body>
+			<div class="off-canvas-wrap" data-offcanvas>
+			  <div class="inner-wrap">
+			    <nav class="tab-bar">
+			      <section class="left-small">
+			        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			      </section>
+
+			      <section class="middle tab-bar-section">
+			        <h1 class="title">Calc</h1>
+			      </section>
+			    </nav>
+
+			    <aside class="left-off-canvas-menu">
+			      <ul class="off-canvas-list">
+			        <li><label>Pesos</label></li>
+			        <li><input value="3" type="tel" placeholder="Peso 1" id="peso1"></li>
+			        <li><input value="3" type="tel" placeholder="Peso 2" id="peso2"></li>
+			        <li><input value="4" type="tel" placeholder="Peso 3" id="peso3"></li>
+			        <li><label>Média</label></li>
+			        <li><input value="6" type="tel" placeholder="Média" id="media"></li>
+			        <li><a href="#" class="button tiny"><b>SALVAR</b></a></li>
+			      </ul>
+			    </aside>
+
+			    <section class="main-section">
+			    
+			    	<div class="row panel">
+						<p>
+							Nota 1:
+							<input type="tel" id="av1">
+						</p>
+
+						<p>
+							Nota 2:
+							<input type="tel" id="av2">
+						</p>
+						
+						<p>
+							Nota 3:
+							<input type="tel" id="av3">
+						</p>
+						
+						<p>
+							Resultado:
+							<input id="resultado" type="text" disabled>
+						</p>
+						
+						<p>
+							<button id="btnCalcular">Calcular</button>
+							<button id="btnLimpar">Limpar</button>
+						</p>
+
+						<p>
+							<div id="divMensagem" data-alert class="alert-box">
+								<span id="mensagem">Calcule sua média! :)</span>
+							</div>
+						</p>
+						<p>
+							<iframe src="http://www.facebook.com/plugins/like.php?href=http://onsistemas.com/calc.html&layout=standard&show_faces=false&width=380&action=like&colorscheme=light&height=25" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:25px;" allowtransparency="true"></iframe>
+						</p>
+					</div>
+
+			    </section>
+
+			  <a class="exit-off-canvas"></a>
+
+			  </div>
+			</div>
+
+			
+		</body>
+</html>
